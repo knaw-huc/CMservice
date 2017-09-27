@@ -29,7 +29,7 @@
 
         <div class="attribute">
             <input type="checkbox"
-                   name="${attribute.lower()}"
+                   name="${attribute}"
                    value="${released_claims[attribute] | list2str}"
                    checked>
             ${released_claims[attribute] | list2str}
