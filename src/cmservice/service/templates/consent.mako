@@ -24,15 +24,15 @@
 
 <div style="clear: both;">
     % for attribute in released_claims:
-        <strong>${_(attribute).capitalize()}</strong>
+        <strong>${_(attribute).capitalize() | h}</strong>
         <br>
 
         <div class="attribute">
             <input type="checkbox"
-                   name="${attribute}"
-                   value="${released_claims[attribute] | list2str}"
+                   name="${attribute | entity}"
+                   value="${released_claims[attribute] | list2str,entity}"
                    checked>
-            ${released_claims[attribute] | list2str}
+            ${released_claims[attribute] | list2str,h}
         </div>
     % endfor
 </div>
@@ -44,10 +44,10 @@
     <h3>${_("Locked attributes")}</h3>
     <p>${_("The following attributes is not optional. If you don't want to send these you need to abort.")}</p>
     % for attribute in locked_claims:
-        <strong class="attr_header">${_(attribute).capitalize()}</strong>
+        <strong class="attr_header">${_(attribute).capitalize() | h}</strong>
         <br>
         <div class="locked_attribute">
-            ${locked_claims[attribute] | list2str}
+            ${locked_claims[attribute] | list2str,h}
         </div>
     % endfor
 </div>
