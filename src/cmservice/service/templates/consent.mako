@@ -99,14 +99,17 @@
         var status = $("input[type=submit][clicked=true]").attr("name");
         consent_status.val(status);
 
+        // Locked means informed, so count locked attributes as consented
+        % for attr in locked_claims:
+            attributes.push("${attr}");
+        % endfor
+
+        // This is impossible now, but leave it here as a reminder of earlier times
         if (attributes.length == 0) {
             consent_status.val("No");
             alert("${_('No attributes where selected which equals no consent where given')}");
         }
 
-        % for attr in locked_claims:
-            attributes.push("${attr}");
-        % endfor
         $('#attributes').val(attributes);
 
         this.submit(); // If all the validations succeeded

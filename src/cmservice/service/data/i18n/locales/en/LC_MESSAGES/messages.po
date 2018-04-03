@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/cmservice/service/templates/consent.mako:12
 msgid "Consent - Your consent is required to continue."
-msgstr "Consent - Your consent is required to continue."
+msgstr "Inform - The following attributes will be released."
 
 #: src/cmservice/service/templates/consent.mako:22
 msgid "would like to access the following attributes:"
@@ -33,7 +33,7 @@ msgstr "Locked attributes"
 msgid ""
 "The following attributes is not optional. If you don't want to send these"
 " you need to abort."
-msgstr "The following attributes is not optional. If you don't want to send these"
+msgstr "The following attributes are not optional. If you don't want to send these"
 " you need to abort."
 
 #: src/cmservice/service/templates/consent.mako:58
