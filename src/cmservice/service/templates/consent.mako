@@ -24,7 +24,7 @@
 
 <div style="clear: both;">
     % for attribute in released_claims:
-        <strong>${_(attribute).capitalize() | h}</strong>
+        <strong>${_(attribute) | h}</strong>
         <br>
 
         <div class="attribute">
