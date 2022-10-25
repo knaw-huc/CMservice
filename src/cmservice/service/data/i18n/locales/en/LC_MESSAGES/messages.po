@@ -85,7 +85,7 @@ msgid "edupersontargetedid"
 msgstr "edupersontargetedid"
 
 msgid "eppn"
-msgstr "eppn (hashed)"
+msgstr "eppn"
 
 #: src/cmservice/service/templates/list_values.mako:9
 msgid "year"

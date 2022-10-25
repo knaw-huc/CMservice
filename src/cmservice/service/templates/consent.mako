@@ -31,6 +31,7 @@
             <input type="checkbox"
                    name="${attribute | entity}"
                    value="${released_claims[attribute] | list2str,entity}"
+                   disabled
                    checked>
             ${released_claims[attribute] | list2str,h}
         </div>
